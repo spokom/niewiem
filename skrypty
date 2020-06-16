@@ -1,0 +1,78 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'skrypty.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_skrypty(object):
+    def setupUi(self, skrypty):
+        skrypty.setObjectName("skrypty")
+        skrypty.resize(899, 809)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        skrypty.setFont(font)
+        skrypty.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.centralwidget = QtWidgets.QWidget(skrypty)
+        self.centralwidget.setObjectName("centralwidget")
+        self.listView = QtWidgets.QListView(self.centralwidget)
+        self.listView.setGeometry(QtCore.QRect(10, 70, 161, 621))
+        self.listView.setObjectName("listView")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 30, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setTextFormat(QtCore.Qt.AutoText)
+        self.label.setScaledContents(False)
+        self.label.setObjectName("label")
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(220, 70, 641, 441))
+        self.frame.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.frame.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.frame.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.frame.setToolTip("")
+        self.frame.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setLineWidth(3)
+        self.frame.setMidLineWidth(0)
+        self.frame.setObjectName("frame")
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setGeometry(QtCore.QRect(140, 700, 32, 32))
+        self.widget.setStyleSheet("image: url(:/prefixskrypty/plus.jpg);")
+        self.widget.setObjectName("widget")
+        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.widget_2.setGeometry(QtCore.QRect(100, 700, 32, 32))
+        self.widget_2.setStyleSheet("image: url(:/prefixskrypty/minus.jpg);")
+        self.widget_2.setObjectName("widget_2")
+        skrypty.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(skrypty)
+        self.statusbar.setObjectName("statusbar")
+        skrypty.setStatusBar(self.statusbar)
+
+        self.retranslateUi(skrypty)
+        QtCore.QMetaObject.connectSlotsByName(skrypty)
+
+    def retranslateUi(self, skrypty):
+        _translate = QtCore.QCoreApplication.translate
+        skrypty.setWindowTitle(_translate("skrypty", "Biblioteka"))
+        self.label.setText(_translate("skrypty", "<html><head/><body><p>Twoje skrypty</p></body></html>"))
+import skryptyicons
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    skrypty = QtWidgets.QMainWindow()
+    ui = Ui_skrypty()
+    ui.setupUi(skrypty)
+    skrypty.show()
+    sys.exit(app.exec_())
